@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>My Flix!</title>
+    </head>
+    <body>
+        <section class="main-content">
+            <h1>Movies of the 21st Century</h1>
+            <p>This web application allows users to create a profile and create a personal list of their favorite movies 
+                as well as receive information & learn about movies they've watched or interested in.
+            </p>
+        </section>
+        <table>
+            <tr>
+                <th>Request</th>
+                <th>URL</th>
+                <th>HTTP Method</th>
+                <th>Query parameters</th>
+                <th>Request body data format</th>
+                <th>Response body data format</th>
+            </tr>
+            <tr>
+                <td>Get information about app</td>
+                <td>documentation</td>
+                <td>GET</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Get data about movies</td>
+                <td>movies</td>
+                <td>GET</td>
+                <td>none</td>
+                <td>none</td>
+                <td>JSON
+                    <br> {
+                        <br> "title": "Once Upon A Time In Hollywood",
+                        <br>"director": "Quentin Tarantino"
+                    <br>},
+                </td>
+            </tr>
+            <tr>
+                <td>Get information about the URL</td>
+                <td>secureurl</td>
+                <td>GET</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Get data about a movie</td>
+                <td>/data</td>
+                <td>GET</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Get data about genre</td>
+                <td>/genre</td>
+                <td>GET</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Get data about a director</td>
+                <td>/director</td>
+                <td>GET</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Allows new users to register</td>
+                <td>/register</td>
+                <td>POST</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Allows users to update their info</td>
+                <td>/update</td>
+                <td>PUT</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Allows users to add a movie to their favorites</td>
+                <td>/addFavorite</td>
+                <td>PUT</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Allows users to delete a movie from their favorites</td>
+                <td>/deleteFavorite</td>
+                <td>DELETE</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>Allows an existing user to deregister</td>
+                <td>/deregister</td>
+                <td>DELETE</td>
+                <td>none</td>
+                <td>none</td>
+                <td>none</td>
+            </tr>
+        </table>
+    </body>
+</html>

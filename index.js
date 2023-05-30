@@ -56,7 +56,7 @@ const accessLogStream = fs.createWriteStream(
 app.use(morgan('combined', {stream: accessLogStream}));
 
 //sends all files that are requested from within the public folder.
-app.use(express.static('public'));
+app.use(express.static('documentation.html'));
 
 //setups message to user who goes to websites home page.
 app.get('/', (req, res) => {
@@ -82,6 +82,40 @@ app.get('/movies', (req, res) => {
     res.json(topMovies);
 });
 
+
+//Express codes to route all endpoints
+
+app.get('/movies', (req, res) => {
+    res.send('This is a data regarding movies.');
+});
+
+app.get('/genre', (req, res) => {
+    res.send('This shows movie genres.');
+});
+
+app.get('/director', (req, res) => {
+    res.send('This shows information about the movie director');
+});
+
+app.post('/register', (req, res) => {
+    res.send('This is where you register.');
+});
+
+app.put('/update', (req, res) => {
+    res.send('This is where you update your information.');
+});
+
+app.put('/addFavorite', (req, res) => {
+    res.send('Add a favorite movie.');
+});
+
+app.delete('/deleteFavorite', (req, res) => {
+    res.send('Delete a favorite movie');
+});
+
+app.delete('/deregister', (req, res) => {
+    res.send('This is where you deregister.');
+});
 
 app.listen(8080, () => {
     console.log('Your app is listening on port 8080.');
