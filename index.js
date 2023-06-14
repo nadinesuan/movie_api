@@ -214,7 +214,7 @@ app.put('/users/:id', (req, res) => {
         user.name = updatedUser.name;
         res.status(200).json(user);
     } else {
-        res.status(400).send('User not found.')
+        res.status(400).send('No such User.')
     }
 });
 
@@ -262,10 +262,10 @@ app.delete('/users/:id', (req, res) => {
 
 //READ 
 app.get('/movies', (req, res) => {
-    res.json(movies);
+    res.status(200).json(movies);
 });
 
-//READ MOVIE TITLES
+//READ
 app.get('/movies/:title', (req, res) => {
     const { title } = req.params;
     const movie = movies.find(movie => movie.title === title);
@@ -273,7 +273,7 @@ app.get('/movies/:title', (req, res) => {
     if (movie) {
         res.status(200).json(movie);
     } else {
-        res.status(404).send('Could not find that movie.');
+        res.status(400).send('Could not find that movie.');
     }
 });
 
